@@ -1,9 +1,35 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
-$('#currentDay') 
-const date = new Date()
-console.log(date);
+var dateTime = $('#dateTime');
+var saveBtn = document.querySelector(".saveBtn");
+
+var currentHour = moment().hour();
+
+function printDateTime() {
+    var date = moment().format("dddd, mmm, yyyy")
+    dateTime.text(date);
+}
+
+function hourTracker() {
+    $('.timeSchedule').each(function () {
+        var scheduleHour = $(this).attr("id").split("time")[1];
+        console.log("curentHour " + currentHour)
+        console.log("scheduleHour " + scheduleHour)
+
+        if (scheduleHour < currentHour) {
+            $(this).addClass("past");
+        }
+        else if (scheduleHour == currentHour) {
+            $(this).addClass("present");
+        }
+        else {
+            $(this).addClass("future");
+        }
+    })
+    
+}
+
 
 $(function () {
     // TODO: Add a listener for click events on the save button. This code should

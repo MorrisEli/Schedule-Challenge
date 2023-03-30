@@ -1,5 +1,14 @@
 # Schedule-Challenge
 
+## Description
+
+This is a work day schedule app. Using a current time API, it desplays the current time. If a time block is in the past it is colored red. If a time block is present, it is colored grey. If it is a futrure time block it is colored green. You can save info in each time block.
+
+## Screenshot
+
+![Uploading A5BF63CB-4B28-43F1-93A8-6A2C49184F6E_1_201_a.jpeg…]()
+
+
 Criteria:
 ## User Story
 
